@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Confirm Window</title>
+        <script>
+             function check(){
+                var r=confirm('send?');
+                if(r)
+                  return true;
+                else{
+                    alert('send stop');
+                    return false;
+                }
+             }
+        </script>
+    </head>
+    <body>
+        <form action="javascript:alert('data execute')" method="post">
+           <button onclick="return check()">Execute</button>
+        </form>
+    </body>
+</html>

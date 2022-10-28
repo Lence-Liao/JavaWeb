@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Array Window</title>
+       <script>
+           var fruits=[];
+           function pushData(){
+              var f=prompt('input fruit name');
+              fruits.push(f);
+              console.log(fruits);
+           }
+           function unshiftData(){
+            var f=prompt('input fruit name');
+            fruits.unshift(f);
+            console.log(fruits);
+           }
+       </script>
+    </head>
+    <body>
+        <button onclick="pushData()">Array push</button><p>
+        <button onclick="unshiftData()">Array head</button><p>
+    </body>
+</html>

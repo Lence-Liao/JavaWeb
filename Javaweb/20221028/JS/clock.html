@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>clock</title>
+       <script>
+          var td;
+          function showTime(){
+            var sp=document.getElementById("mytime");
+            var d=new Date();
+            sp.innerHTML="<h2>"+d.toLocaleTimeString()+"</h2>";
+          }
+          function start(){
+            td=setInterval(showTime,1000);   
+          }
+          function stop(){
+              clearInterval(td);
+          }
+          start();
+       </script>
+    </head>
+    <body>
+        <button onclick="start()">start</button><p>
+        <button onclick="stop()">stop</button><p>
+        <span id="mytime">00:00:00</span>
+    </body>
+</html>
