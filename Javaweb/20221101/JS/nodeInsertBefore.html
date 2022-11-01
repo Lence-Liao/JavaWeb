@@ -1,0 +1,16 @@
+<div id="foo"><span id="s1">hello</span><span id="s2">world</span></div>
+<script>
+// 建立㇐個新的<span>
+var newSpan = document.createElement('span');
+// 增添㇐些內容
+newSpan.innerHTML = 'my new span text';
+// 取得目前頁面上的foo 元素
+var foo = document.getElementById('foo');
+// 取得目前頁面上的s2 元素
+var s2 = document.getElementById('s2');
+// 將新的span 元素放到foo 元素中的s2 子元素前面
+foo.insertBefore(newSpan, s2);
+// 顯示<span id="s1">hello</span><span> my new span text </span><span>id="s2">world</span>
+
+alert(foo.innerHTML);
+</script>

@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>inline event handling example</title>
+</head>
+<body>
+<button onclick="triggerAlert(this);" data-name="Mike">click
+me</button>
+<script>
+function triggerAlert(em) {
+alert('Hey ' + em.getAttribute('data-name'));
+}
+</script>
+</body>
+</html>

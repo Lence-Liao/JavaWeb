@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Key Event</title>
+
+</head>
+
+<body>
+    <p id="p1">Paragraph 1</p>
+    <span id="sp1">Span 1</span>
+    <div id="div1">Division 1</div>
+    <script>
+        function ontop1(){
+            alert('div1 mouse on top');
+        }
+        function onleaving(){
+            alert('div1 mouse leaving');
+        }
+        var div1=document.getElementById("div1");
+        div1.addEventListener('mouseover',ontop1);
+        div1.addEventListener('mouseout',onleaving);
+    </script>
+</body>
+
+</html>

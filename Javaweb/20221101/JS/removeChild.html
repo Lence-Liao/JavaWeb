@@ -1,0 +1,14 @@
+<div id="container"><div id="nested">12</div>34</div>
+<script>
+// 取得目前頁面上的container <div> 元素
+var container = document.getElementById('container');
+// 取得目前頁面上的nested <div> 元素
+var nested = document.getElementById('nested');
+// 從頁面上移除nested <div> 元素
+// removeChild 方法會返回被移除的元素
+var garbage = container.removeChild(nested);
+// 顯示<div id="nested">12</div>
+alert(garbage.outerHTML);
+// 顯示34
+alert(container.innerHTML);
+</script>

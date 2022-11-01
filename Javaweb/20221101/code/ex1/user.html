@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>User</title>
+</head>
+<body>
+<h2>
+   <form onsubmit="return send()" action="JSONServlet" method="post">
+       User Name:<input type="text" id="userName" value="John"/><br/>
+       phone:<input type="text" id="phone" value="23826015"/><br/>
+       address:<input type="text" id="address" value="Taipei"/><br/>
+       <input type="hidden" name="mydata" id="mydata"/>
+       <button>Send</button>
+   </form>
+</h2>
+<script>
+    function send(){
+        var obj={};
+        obj.userName=document.getElementById("userName").value;
+        obj.phone=document.getElementById("phone").value;
+        obj.address=document.getElementById("address").value;
+        var hd=document.getElementById("mydata");
+        hd.value=JSON.stringify(obj);
+        return true;
+    }
+</script>
+</body>
+</html>

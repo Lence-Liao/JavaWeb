@@ -1,0 +1,13 @@
+<div id="foo"><span id="s1">hello</span><span id="s2">world</span></div>
+<script>
+// 取得目前頁面上的foo 元素
+var foo = document.getElementById('foo');
+// 取得目前頁面上的s1 元素
+var s1 = document.getElementById('s1');
+// 取得目前頁面上的s2 元素
+var s2 = document.getElementById('s2');
+// 將s2 元素放到foo 元素中的s1 子元素前面
+foo.insertBefore(s2, s1);
+// 顯示<span id="s2">world</span><span id="s1">hello</span>
+alert(foo.innerHTML);
+</script>

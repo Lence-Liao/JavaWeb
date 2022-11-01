@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>child nodes</title>
+
+</head>
+
+<body>
+    <!-- 以下標籤不可以換行不然節點會出現undefined -->
+    <div><span id="s1">s1</span><span id="s2">s2</span></div>
+    <button onclick="Sibling()">Get Sibling</button>
+    <script>
+        function Sibling() {
+            // 會顯示null
+            alert(document.getElementById('s1').previousSibling);
+            // 會顯示"s1"
+            alert(document.getElementById('s2').previousSibling.id);
+        }
+    </script>
+
+</body>
+
+</html>

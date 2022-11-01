@@ -1,0 +1,10 @@
+<p id="foo">hello world</p>
+<script>
+var foo = document.getElementById('foo');
+// 輸出"" 空字串，因為foo 上沒有設定style 屬性
+alert(foo.style.cssText);
+// 將foo 的字體大小設為20px、字體顏色設為紫色
+foo.style.cssText = 'font-size: 20px; color: purple;';
+// 輸出font-size: 20px; color: purple;
+alert(foo.style.cssText);
+</script>

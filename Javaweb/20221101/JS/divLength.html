@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Div Length</title>
+    <script>
+        function start() {
+            // 取得id 為div1 的HTML 元素
+            var div1 = document.getElementById('div1');
+            // 取得div1 下面所有的<p> 元素
+            var div1Param = div1.getElementsByTagName('p');
+            // 取得div1 下面總共有幾個<p> 元素
+            // num = 5
+            var num = div1Param.length;
+            // .....
+            alert(num);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="start()">start</button>
+    <div id="div1">
+        <p>P1</p>
+        <p>P2</p>
+        <p>P3</p>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<style>
+    #elem {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    height: 50px;
+    }
+    </style>
+    <div id="elem" style="top:50px;">CSS Property Test</div>
+    <script>
+    var elem = document.getElementById('elem');
+    // 顯示100px
+    alert(elem.currentStyle.height);
+    // 顯示50px
+    alert(elem.currentStyle.top);
+    </script>
