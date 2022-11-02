@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery hide show</title>
+    <script src="js/jquery3.6.0.js"></script>
+</head>
+
+<body>
+    <button id="btn1">h2 color red</button>
+    <button id="btn2">p even yellow</button>
+    <button id="btn3">p odd aqua</button>
+    <p></p>
+    <h2>jQuery Header2_1</h2>
+    <h2>jQuery Header2_2</h2>
+    <h2>jQuery Header2_3</h2>
+    <p>jQuery Paragraph 1</p>
+    <p>jQuery Paragraph 2</p>
+    <p>jQuery Paragraph 3</p>
+        <script>
+            function h2red(){
+                $("h2").each(function(){
+                    this.style.color='red';
+                });
+            }
+            function peven(){
+                $("p:even").each(function(){
+                    this.style.color="aqua";
+                });
+            }
+            function podd(){
+                $("p:odd").each(function(){
+                    this.style.color="yellow";
+                });
+            }
+            function start(){
+                $("#btn1").click(h2red);
+                $("#btn2").click(peven);
+                $("#btn3").click(podd);
+            }
+            $(document).ready(start);
+        </script>
+</body>
+
+</html>

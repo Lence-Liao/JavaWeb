@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery hide show</title>
+    <script src="js/jquery3.6.0.js"></script>
+</head>
+
+<body>
+    <button id="btn1">set value</button>
+    <button id="btn2">get value</button>
+    <button id="btn3">p set CSS</button>
+    <button id="btn4">set image</button>
+    <p></p>   
+    <input type="text" id="username" value="George"/><br/>
+    <p>jQuery Paragraph 1</p>
+    <p>jQuery Paragraph 2</p>
+    <p>jQuery Paragraph 3</p>
+    <img src="#" id="img1" width="640" height="400"/>
+        <script>
+            function setColor(){
+                $("p").css("color","red");
+            }
+            function getValue(){
+                alert($("#username").val());
+            }
+            function setValue(){
+                var s=prompt("user name");
+                $("#username").val(s);
+            }
+            function setImage(){
+                var s=prompt("image name");
+                var path="imgs/"+s+".jpg";
+                $("#img1").attr("src",path);
+            }
+            function start(){
+                $("#btn1").click(setValue);
+                $("#btn2").click(getValue);
+                $("#btn3").click(setColor);
+                $("#btn4").click(setImage);
+            }
+            $(document).ready(start);
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>First jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <button>execute jQuery 1</button>
+    <p>
+        <button>execute jQuery 2</button>
+    <p>
+    <p id="em">jQuery Paragraph 1</p>
+        <script>
+            function button_click() {
+                alert('button clicked');
+            }
+            function start() {
+                $("button").click(button_click);
+                $('#em').click(function () {
+                    $('#em').css('background-color', 'green');
+                });
+            }
+            $(document).ready(start);
+        </script>
+</body>
+
+</html>

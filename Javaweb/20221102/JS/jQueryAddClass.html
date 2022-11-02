@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery hide show</title>
+    <script src="js/jquery3.6.0.js"></script>
+    <style>
+        .big{ font-weight: bold; font-size:24px; }
+        .small{ font-weight: normal; font-size:12px; }
+        .bluecolor{color:blue}
+    </style>
+</head>
+
+<body>
+    <button id="btn1">add class .big</button>
+    <button id="btn2">add class .small</button>
+    <button id="btn3">remove class .bluecolor</button>
+    <div class="container">
+        <h2>jQuery addClass() Method</h2>
+        <div class="hello">Hello</div>
+        <div class="goodbye">Goodbye</div>
+        <div id="div3" class="big bluecolor">Hello Goodbye</div>
+    </div>
+        <script>
+            function addBig(){
+                $(".hello").addClass("big" );
+                $(".hello").addClass("bluecolor" );
+                             
+            }
+            function addSmall(){                
+               $(".goodbye").addClass("small");
+               $(".goodbye").addClass("bluecolor" );
+               
+            }
+            function removeColor(){
+                $("#div3").toggleClass("bluecolor");
+            }
+            function start(){
+                $("#btn1").click(addBig);
+                $("#btn2").click(addSmall);
+                $("#btn3").click(removeColor);
+            }
+            $(document).ready(start);
+        </script>
+</body>
+
+</html>

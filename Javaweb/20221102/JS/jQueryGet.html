@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery hide show</title>
+    <script src="js/jquery3.6.0.js"></script>   
+</head>
+
+<body>
+    <button id="btn1">get User.txt</button>
+   
+    <div id="display"></div>
+        <script>
+            function success(data){
+                $("#display").html("<h2>"+JSON.parse(data).userName+"</h2>");
+            }           
+            function startRequest(){
+                $.get("user.txt", success);
+            }
+            function start(){
+                $("#btn1").click(startRequest);
+                
+            }
+            $(document).ready(start);
+        </script>
+</body>
+
+</html>
