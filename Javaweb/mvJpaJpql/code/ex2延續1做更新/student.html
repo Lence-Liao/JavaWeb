@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Form</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+</head>
+<body>
+ <h2>
+ 
+     Student No:<input type="text" id="sid" value="201"/><br>
+     Student Name:<input type="text" id="sname" value="Mary"/><br>
+     Student Age:<input type="text" id="age" value="20"/><br>
+     <input type="button" id="query" value="Get All Students"/>
+     <input type="button" id="modify" value="update students"/><p>
+  <div id="display"></div>
+  </h2>
+  <script>
+    
+    function result(data){
+       $("#display").html(data);
+    }
+    function updateStudent(){
+      var id=$("#sid").val();
+      var name=$("#sname").val();
+      var ag=$("#age").val();
+      $.post("UpdateStudentServlet",{"sid":id , "sname":name , "age":ag},result)
+      
+    }
+    function getAll(){
+       $.get("StudentServlet",result); 
+    }
+    function start(){
+       $("#query").click(getAll);
+       $("#modify").click(updateStudent);
+    }
+    $(document).ready(start);
+  </script>
+</body>
+</html>
