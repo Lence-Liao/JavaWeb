@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script class= "image1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script class= "image2" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script class= "image3" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+    .image{
+        width: 100px;
+        height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Apple</button>
+        <button type="button" class="btn btn-primary">Samsung</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+             Sony
+          </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+            </div>
+        </div>
+    </div>
+      
+      
+      
+
+    <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+      </button>
+      <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+        Loading..
+      </button>
+      <button class="btn btn-primary" disabled>
+        <span class="spinner-border spinner-border-sm"></span>
+        Loading..
+      </button>
+      <button class="btn btn-primary" disabled>
+        <span class="spinner-grow spinner-grow-sm"></span>
+        Loading..
+      </button>
+      
+    
+<div class="container">
+  <h2>Hover Rows</h2>
+  <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>            
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy6jXRT1fFrXRv-kfTl4ZW1ZQ1hsoe2NXt9Q&usqp=CAU" class="rounded" alt="Cinque Terre">
+  <img src="https://i.kfs.io/playlist/global/61763305v2/cropresize/600x600.jpg" class="rounded-circle" alt="Cinque Terre">
+  <img src="https://s.yimg.com/ny/api/res/1.2/M4zje7KKzUbVXnWXFGZ2Jw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM2MA--/https://media.zenfs.com/zh-tw/nownews.com/cd951fbb7ac03031aa7130b06be59985" class="img-thumbnail" alt="Cinque Terre">
+
+  <table class="table table-hover" >
+    <thead>
+      <tr >
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="table-warning">John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr class="table-primary">
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
